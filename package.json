@@ -1,0 +1,24 @@
+{
+  "name": "gulp-rjs",
+  "version": "0.1.0",
+  "description": "A gulp interface to r.js",
+  "main": "index.js",
+  "scripts": { },
+  "author": {
+    "name": "Nicholas Kostelnik",
+    "url": "https://github.com/nkostelnik"
+  },
+  "license": "ISC",
+  "homepage": "https://github.com/nkostelnik/gulp-rjs",
+  "bugs": {
+    "url": "https://github.com/nkostelnik/gulp-rjs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nkostelnik/gulp-rjs.git"
+  },
+  "dependencies": {
+    "event-stream": "*",
+    "gulp-util": "~2.2.6"
+	}
+}
