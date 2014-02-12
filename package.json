@@ -4,6 +4,18 @@
   "description": "A gulp interface to r.js",
   "main": "index.js",
   "scripts": { },
+  "keywords": [
+    "gulpplugin",
+    "gulp",
+    "requirejs",
+    "rjs",
+    "require.js",
+    "r.js",
+    "optimizer",
+    "require",
+    "gulp-requirejs",
+    "gulp-rjs"
+  ],
   "author": {
     "name": "Nicholas Kostelnik",
     "url": "https://github.com/nkostelnik"
