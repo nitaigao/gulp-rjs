@@ -20,7 +20,7 @@
   "dependencies": {
     "event-stream": "*",
     "gulp-util": "~2.2.6",
-    "requirejs": "2.1.8"
+    "requirejs": "*"
   },
   "readme": "gulp-rjs\n========\n",
   "readmeFilename": "README.md",
