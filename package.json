@@ -18,6 +18,7 @@
     "url": "git://github.com/nkostelnik/gulp-rjs.git"
   },
   "dependencies": {
-    "event-stream": "*"
+    "event-stream": "*",
+    "requirejs": "*"
 	}
 }
