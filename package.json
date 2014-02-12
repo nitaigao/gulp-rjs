@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "A gulp interface to r.js",
   "main": "index.js",
-  "scripts": { },
+  "scripts": {},
   "author": {
     "name": "Nicholas Kostelnik",
     "url": "https://github.com/nkostelnik"
@@ -19,6 +19,15 @@
   },
   "dependencies": {
     "event-stream": "*",
-    "gulp-util": "~2.2.6"
-	}
+    "gulp-util": "~2.2.6",
+    "requirejs": "2.1.8"
+  },
+  "readme": "gulp-rjs\n========\n",
+  "readmeFilename": "README.md",
+  "_id": "gulp-rjs@0.1.0",
+  "dist": {
+    "shasum": "17f640f077abafab9dec6e2f444e0ed4b3153e36"
+  },
+  "_from": "https://github.com/nkostelnik/gulp-rjs/tarball/master",
+  "_resolved": "https://github.com/nkostelnik/gulp-rjs/tarball/master"
 }
