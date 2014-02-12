@@ -16,8 +16,9 @@ var rjs = require("gulp-rjs");
 gulp.src('app/scripts/*.js')
 	.pipe(gulp.dest('./dist/scripts'))
 	.pipe(rjs({baseUrl:'dist/scripts'}))
+```
 
-or with coffeescript
+Coffescript pipeline example:
 
 ```javascript
 var rjs = require("gulp-rjs");
@@ -25,6 +26,7 @@ gulp.src('app/scripts/*.coffee')
 	.pipe(coffee().on('error', gutil.log))
 	.pipe(gulp.dest('./dist/scripts'))
 	.pipe(rjs({baseUrl:'dist/scripts'}))
+```
 
 ## License
 
