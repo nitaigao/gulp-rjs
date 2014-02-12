@@ -15,7 +15,7 @@ module.exports = function (options) {
         var name = path.basename(file.path).replace(path.extname(file.path), '');
         var outPath = path.join(options.baseUrl, name + '.js');
         console.log("node r.js -o baseUrl=" + options.baseUrl + " name=" + name + " out=" + outPath);
-        requirejs.optimize({name:name, baseUrl:options.baseUrl, out:outPath});
+        requirejs.optimize({name:name, baseUrl:options.baseUrl, out:outPath, paths:options.paths});
       });
     });
 };
