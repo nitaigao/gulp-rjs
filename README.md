@@ -1,6 +1,6 @@
 # gulp-rjs [![NPM version][npm-image]][npm-url]
 
-> require.js r.js optimizer plugin for [gulp](https://github.com/wearefractal/gulp)
+> r.js optimizer plugin for [gulp](https://github.com/wearefractal/gulp)
 
 ## Usage
 
@@ -18,7 +18,7 @@ gulp.src('app/scripts/*.js')
 	.pipe(rjs({baseUrl:'dist/scripts'}))
 ```
 
-Coffescript pipeline example:
+CoffeeScript pipeline example:
 
 ```javascript
 var rjs = require("gulp-rjs");
