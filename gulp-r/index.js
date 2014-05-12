@@ -9,12 +9,17 @@
 var es = require("event-stream"),
     fs = require("fs"),
     path = require("path"),
+    OptimizerSettings = require(path.join(__dirname, "/OptimizerSettings")),
     requirejs = require("requirejs");
 
 module.exports = function (options) {
+    options = new OptimizerSettings(options);
+    console.log(options);
+
     return es.mapSync(function (file, cb) {
-        console.log(file);
-        return file;
+        console.log(file.path);
+
+        return;
 
         stream.write(file.contents, "", function () {
             var name = path.basename(file.path).replace(path.extname(file.path), ""),
