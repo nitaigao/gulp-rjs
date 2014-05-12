@@ -10,20 +10,27 @@
 
 var assert = require("chai").assert,
     path = require("path"),
-    gulpr = require(global.paths.root + "/gulp-r"),
+    gulp = require("gulp"),
+    gulpr = require(path.join(global.paths.root, "/gulp-r")),
     requirejs = require("requirejs");
 
 describe("gulp-r/gulpr", function () {
-    var baseUrl = path.join(global.paths.root + "/gulp-r/fixtures/app/"),
-        req;
-
-    req = requirejs.config({
-        "baseUrl": baseUrl
-    });
+    var baseUrl = path.join(global.paths.root, "/gulp-r/fixtures/app/"),
+        mainUrl = path.join(baseUrl, "/main.js"),
+        req = requirejs.config({
+            "baseUrl": baseUrl
+        });
 
     it("loads raw uncompressed module", function () {
-        req([baseUrl + "main.js"], function (main) {
+        req([mainUrl], function (main) {
             assert.deepEqual(main, ["main", "a", "b", "c", "d"]);
         });
+    });
+
+    it("minifies files with 'gulp'", function () {
+        gulp.src(mainUrl)
+            .pipe(gulpr({
+            "baseUrl": baseUrl
+        }));
     });
 });

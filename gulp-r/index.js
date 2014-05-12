@@ -13,16 +13,12 @@ var es = require("event-stream"),
 
 module.exports = function (options) {
     return es.mapSync(function (file, cb) {
-        var destPath = path.join(file.cwd, options.baseUrl, path.basename(file.path)),
-            stream = fs.createWriteStream(destPath, {
-                "flags": "w"
-            });
+        console.log(file);
+        return file;
 
         stream.write(file.contents, "", function () {
             var name = path.basename(file.path).replace(path.extname(file.path), ""),
                 outPath = path.join(options.baseUrl, name + ".js");
-
-            console.log("node r.js -o baseUrl=" + options.baseUrl + " name=" + name + " out=" + outPath);
 
             if (!options.name) {
                 options.name = name;
