@@ -1,36 +1,38 @@
 {
-  "name": "gulp-rjs",
-  "version": "0.1.0",
-  "description": "A gulp interface to r.js",
-  "main": "index.js",
-  "scripts": { },
-  "keywords": [
-    "gulpplugin",
-    "gulp",
-    "requirejs",
-    "rjs",
-    "require.js",
-    "r.js",
-    "optimizer",
-    "require",
-    "gulp-requirejs",
-    "gulp-rjs"
-  ],
-  "author": {
-    "name": "Nicholas Kostelnik",
-    "url": "https://github.com/nkostelnik"
-  },
-  "license": "ISC",
-  "homepage": "https://github.com/nkostelnik/gulp-rjs",
-  "bugs": {
-    "url": "https://github.com/nkostelnik/gulp-rjs/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/nkostelnik/gulp-rjs.git"
-  },
-  "dependencies": {
-    "event-stream": "*",
-    "requirejs": "*"
-	}
+    "author": {
+        "name": "Nicholas Kostelnik",
+        "url": "https://github.com/nkostelnik"
+    },
+    "contributors": [
+        "Mateusz Charytoniuk <mateusz.charyotniuk@gmail.com>"
+    ],
+    "name": "gulp-r",
+    "version": "1.0.0",
+    "main": "gulp-r",
+    "scripts": {
+        "test": "gulp test"
+    },
+    "dependencies": {
+        "cruks-lib-config": "2.x",
+        "event-stream": "3.1.x",
+        "requirejs": "2.1.x"
+    },
+    "devDependencies": {
+        "chai": "1.9.x",
+        "gulp": "3.x",
+        "gulp-cached": "0.x",
+        "gulp-esformatter": "0.x",
+        "gulp-eslint": "0.x",
+        "gulp-istanbul": "0.x",
+        "gulp-mocha": "0.x",
+        "gulp-plumber": "0.x",
+        "gulp-watch": "0.x"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:polacks/gulp-r.git"
+    },
+    "engines": {
+        "node": ">=0.10"
+    }
 }
