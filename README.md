@@ -1,15 +1,15 @@
-# gulp-r
+# polacks-gulp-rjs
 
-First, install `gulp-r` as a development dependency:
+First, install `polacks-gulp-rjs` as a development dependency:
 
 ```shell
-npm install --save-dev gulp-rjs
+npm install --save-dev polacks-gulp-rjs
 ```
 
 Then, use it in your `gulpfile.js`:
 
 ```javascript
-var rjs = require("gulp-rjs");
+var rjs = require("polacks-gulp-rjs");
 
 gulp.src("app/scripts/*.js")
     .pipe(gulp.dest("./dist/scripts"))
@@ -20,6 +20,6 @@ gulp.src("app/scripts/*.js")
 
 ---
 
-[![Build Status](https://travis-ci.org/polacks/gulp-r.svg?branch=master)](https://travis-ci.org/polacks/gulp-r)
-[![Code Climate](https://codeclimate.com/github/polacks/gulp-r.png)](https://codeclimate.com/github/polacks/gulp-r)
-[![Dependency Status](https://david-dm.org/polacks/gulp-r.svg)](https://david-dm.org/polacks/gulp-r)
+[![Build Status](https://travis-ci.org/polacks/polacks-gulp-rjs.svg?branch=master)](https://travis-ci.org/polacks/polacks-gulp-rjs)
+[![Code Climate](https://codeclimate.com/github/polacks/polacks-gulp-rjs.png)](https://codeclimate.com/github/polacks/polacks-gulp-rjs)
+[![Dependency Status](https://david-dm.org/polacks/polacks-gulp-rjs.svg)](https://david-dm.org/polacks/polacks-gulp-rjs)

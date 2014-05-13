@@ -14,7 +14,6 @@ var es = require("event-stream"),
 
 module.exports = function (options) {
     options = new OptimizerSettings(options);
-    console.log(options);
 
     return es.mapSync(function (file, cb) {
         console.log(file.path);

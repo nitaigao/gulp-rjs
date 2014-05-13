@@ -26,7 +26,9 @@
         "gulp-istanbul": "0.x",
         "gulp-mocha": "0.x",
         "gulp-plumber": "0.x",
-        "gulp-watch": "0.x"
+        "gulp-watch": "0.x",
+        "mktemp": "0.3.x",
+        "rimraf": "2.2.x"
     },
     "repository": {
         "type": "git",

@@ -23,7 +23,8 @@ OptimizerSettings.prototype = Object.create(Settings.prototype);
 
 OptimizerSettings.prototype.expect = function () {
     return expect.schema({
-        "baseUrl": expect.string().normalize(path.normalize) // "paths": expect.map(expect.string()).optional()
+        "baseUrl": expect.string().normalize(path.normalize),
+        "paths": expect.map(expect.string()).optional()
     }).strict(true);
 };
 
