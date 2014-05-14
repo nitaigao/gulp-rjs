@@ -9,10 +9,10 @@
 /* global afterEach: false, beforeEach: false, describe: false, it: false */
 
 var assert = require("chai").assert,
+    path = require("path"),
     gulp = require("gulp"),
     gulpr = require(path.join(global.paths.root, "/gulp-r")),
     mktemp = require("mktemp"),
-    path = require("path"),
     requirejs = require("requirejs"),
     rimraf = require("rimraf");
 
@@ -25,16 +25,17 @@ describe("gulp-r/gulpr", function () {
         });
 
     afterEach(function (done) {
-        mktemp.createDir("rjs-XXX", function (err, p) {
-            assert.ifError(err);
-
-            console.log(p);
-            destUrl = p;
-        });
+        rimraf(destUrl, done);
     });
 
     beforeEach(function (done) {
-        rimraf(destUrl, done);
+        mktemp.createDir("rjs-XXX.cache", function (err, p) {
+            assert.ifError(err);
+
+            destUrl = p;
+
+            done();
+        });
     });
 
     it("loads raw uncompressed module", function () {
@@ -48,7 +49,8 @@ describe("gulp-r/gulpr", function () {
             "baseUrl": baseUrl
         };
 
-        gulp.src(mainUrl).pipe(gulpr(options));
-        // .pipe(gulp.dest());
+        gulp.src(mainUrl)
+            .pipe(gulpr(options))
+            .pipe(gulp.dest(destUrl));
     });
 });

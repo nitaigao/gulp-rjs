@@ -1,4 +1,5 @@
 # automatically generated files
+*.cache
 *.log
 
 # code coverage reports

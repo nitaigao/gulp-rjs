@@ -9,6 +9,7 @@
 var path = require("path"),
     libConfig = require("cruks-lib-config"),
     expect = libConfig.expect,
+    // Reference = libConfig.Reference,
     Settings = libConfig.Settings;
 
 /**
@@ -23,6 +24,10 @@ OptimizerSettings.prototype = Object.create(Settings.prototype);
 
 OptimizerSettings.prototype.expect = function () {
     return expect.schema({
+        // "baseUrl": expect.some([
+        // new Reference().no
+        // expect.string().normalize(path.normalize),
+        // ])
         "baseUrl": expect.string().normalize(path.normalize),
         "paths": expect.map(expect.string()).optional()
     }).strict(true);
