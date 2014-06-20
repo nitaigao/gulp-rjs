@@ -3,13 +3,13 @@
 First, install `polacks-gulp-rjs` as a development dependency:
 
 ```shell
-npm install --save-dev polacks-gulp-rjs
+npm install --save-dev gulp-r
 ```
 
 Then, use it in your `gulpfile.js`:
 
 ```javascript
-var rjs = require("polacks-gulp-rjs");
+var rjs = require("gulp-r");
 
 gulp.src("app/scripts/*.js")
     .pipe(gulp.dest("./dist/scripts"))
