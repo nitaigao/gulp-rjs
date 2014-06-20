@@ -12,10 +12,10 @@ Then, use it in your `gulpfile.js`:
 var rjs = require("gulp-r");
 
 gulp.src("app/scripts/*.js")
-    .pipe(gulp.dest("./dist/scripts"))
     .pipe(rjs({
         "baseUrl": "dist/scripts"
     }))
+    .pipe(gulp.dest("./dist/scripts"));
 ```
 
 ---
