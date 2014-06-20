@@ -78,10 +78,8 @@ gulp.task("lint", function () {
 });
 
 gulp.task("test", function () {
-    gulp.src(global.paths.tests.files)
-        .pipe(plumber())
-        .pipe(mocha({
-        "bail": true
+    gulp.src(global.paths.tests.files).pipe(mocha({
+        "reporter": "tap"
     }));
 });
 
