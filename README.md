@@ -1,36 +1,25 @@
-# gulp-rjs [![NPM version][npm-image]][npm-url]
+# polacks-gulp-rjs
 
-> r.js optimizer plugin for [gulp](https://github.com/wearefractal/gulp)
-
-## Usage
-
-First, install `gulp-rjs` as a development dependency:
+First, install `polacks-gulp-rjs` as a development dependency:
 
 ```shell
-npm install --save-dev gulp-rjs
+npm install --save-dev gulp-r
 ```
 
 Then, use it in your `gulpfile.js`:
-```javascript
-var rjs = require("gulp-rjs");
-gulp.src('app/scripts/*.js')
-	.pipe(gulp.dest('./dist/scripts'))
-	.pipe(rjs({baseUrl:'dist/scripts'}))
-```
-
-CoffeeScript pipeline example:
 
 ```javascript
-var rjs = require("gulp-rjs");
-gulp.src('app/scripts/*.coffee')
-	.pipe(coffee().on('error', gutil.log))
-	.pipe(gulp.dest('./dist/scripts'))
-	.pipe(rjs({baseUrl:'dist/scripts'}))
+var rjs = require("gulp-r");
+
+gulp.src("app/scripts/*.js")
+    .pipe(rjs({
+        "baseUrl": "dist/scripts"
+    }))
+    .pipe(gulp.dest("./dist/scripts"));
 ```
 
-## License
+---
 
-[MIT License](http://en.wikipedia.org/wiki/MIT_License)
-
-[npm-url]: https://npmjs.org/package/gulp-rjs
-[npm-image]: https://badge.fury.io/js/gulp-rjs.png
+[![Build Status](https://travis-ci.org/polacks/polacks-gulp-rjs.svg?branch=master)](https://travis-ci.org/polacks/polacks-gulp-rjs)
+[![Code Climate](https://codeclimate.com/github/polacks/polacks-gulp-rjs.png)](https://codeclimate.com/github/polacks/polacks-gulp-rjs)
+[![Dependency Status](https://david-dm.org/polacks/polacks-gulp-rjs.svg)](https://david-dm.org/polacks/polacks-gulp-rjs)
